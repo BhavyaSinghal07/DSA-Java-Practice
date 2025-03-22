@@ -1,16 +1,18 @@
 // ques1 is to check the array is sorted or not
 // ques2 for linear search using 4 different methods
 // ques3 for linear search on multiple occured index
-// ques4  hoe to return an array list on linear search on multiple occured element 
+// ques4  how to return an array list on linear search on multiple occured element, basically this ques majorly discuss for craete an arrayList inside the parameter and return list in the body 
 
 
 import java.util.ArrayList;
 
-public class ques1{
+public class ques1_2_3_4{
+
     public static void main(String args[]){
 
         int[] arr = {1, 2, 4, 3, 6, 7};
         System.out.println(isSorted(arr, 0));     // initially the index is 0
+
 
         System.out.println(isSearch(arr, 3, 0));            // search for 3 starting from 0th index
         System.out.println(isSearch1(arr, 7, 0));         // search for 7 starting from 0th index
@@ -22,10 +24,24 @@ public class ques1{
         multipleIndex(arr1, 06, 0);       // call the finction
         System.out.println(list);                 // prints the indexes store in list
 
-        multipleIndex1(arr1, 07, 0);  
-        System.out.println(list1);
+        
+        // calling the function of ques 4
+        System.out.println(multipleIndex1(arr1, 7, 0, new ArrayList<>()));
+
+        // another method to call the function of ques 4
+        ArrayList<Integer> ans = multipleIndex1(arr1, 7, 0, new ArrayList<>());
+        System.out.println(ans);
+
+        // another method to call the function of ques 4
+        ArrayList<Integer> list2 = new ArrayList<>();
+        ArrayList<Integer> ans1 = multipleIndex1(arr1, 7, 0, list2);
+        System.out.println(ans1);
+        
+        // another method to call the function of ques 4
+        System.out.println(list2);    // this is also accessible, but only after calling the function and list2
 
     }
+
 
     
     // ques1: to check the array is sorted or not
@@ -102,8 +118,9 @@ public class ques1{
     }
 
 
-    // another method to solve this problem this is also the ques4
-    static ArrayList multipleIndex1(int[] arr1, int t5, int ind5, ArrayList<Integer> list1){
+
+    // ques4: another method to solve this problem, and this is also the ques4
+    static ArrayList<Integer> multipleIndex1(int[] arr1, int t5, int ind5, ArrayList<Integer> list1){
 
         if(ind5 == arr1.length){      // if index value reaches to the out of the array then it returns -1 the element doesn't found and exit
             return list1;
@@ -111,8 +128,10 @@ public class ques1{
         if (arr1[ind5] == t5) {       // if it gets element it returns the index value of it's location
             list1.add(ind5);
         }
-        multipleIndex1(arr1, t5, ind5+1);    // otherwise edits in index value and calls function again
+        return multipleIndex1(arr1, t5, ind5+1, list1);    // otherwise edits in index value and calls function again
     }
 
-
 }
+
+
+/* Note: if we initialize anything inside the body of func. it is applicable only for that func., if we initialize outside or in parameters then we can call them in further func. */
