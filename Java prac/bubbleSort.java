@@ -1,4 +1,4 @@
-// bubble sort is a method to sort a sequence in ascending or descending 
+// bubble sort is a method to sort a sequence in ascending or descending order
 // in this type of sorting, it compare each element in sequence with each other in steps and then after completion of each step we get largest element at the last of the sequence
 // on second step 2nd largest element will come at 2nd last position and so on
 // on each step there is one more largest element will add at right side which increase the length of sorted array, hence we use the pivot method to ignore the last sorted seq.
