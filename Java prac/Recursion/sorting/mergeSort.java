@@ -1,5 +1,7 @@
 // time complexity: O(N * logN)
 // space complexity: O(N logN)
+// merge sort is better in linked list due to memory allocation
+// hybrid soring: it is also known as tim sort as it is the combination of merge sort + insertion sort
 
 
 import java.util.Arrays;
