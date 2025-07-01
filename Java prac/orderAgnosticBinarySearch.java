@@ -1,4 +1,4 @@
-// in linear and binary search we know that the elements are always in sorted manner but the can be ascending or descending hence to check they are ascending or descending we use the concept "Order Agnostic" in binary search
+// in linear and binary search we know that the elements are always in sorted manner but that can be ascending or descending hence to check they are ascending or descending we use the concept "Order Agnostic" in binary search
 
 public class orderAgnosticBinarySearch {
     public static void main(String[] args) {
